@@ -126,7 +126,7 @@ const enums = {
   xpQueueStatus: {
     SET_XP: 'SET_XP'
   },
-  reportQueueStatus: {
+  eReportQueueStatus: {
     SET_REPORT: 'SET_REPORT',
     SET_GLOBAL_LEADERBOARD_REMOVE_REDIS_KEY: 'SET_GLOBAL_LEADERBOARD_REMOVE_REDIS_KEY'
   },
@@ -217,24 +217,6 @@ const enums = {
       SELL: 'SELL'
     }
   },
-  symbolType: {
-    value: ['YES', 'NO'],
-    description: { YES: 'Yes', NO: 'No' },
-    default: 'YES',
-    map: {
-      YES: 'YES',
-      NO: 'NO'
-    }
-  },
-  orderType: {
-    value: ['MARKET', 'LIMIT'],
-    description: { MARKET: 'Market', LIMIT: 'Limit' },
-    default: 'MARKET',
-    map: {
-      MARKET: 'MARKET',
-      LIMIT: 'LIMIT'
-    }
-  },
   orderStatus: {
     value: ['PENDING', 'MATCHED', 'CANCEL', 'CANCELLED', 'PARTIALLY_FILLED', 'SETTLED'],
     description: { PENDING: 'Pending', MATCHED: 'Matched', CANCEL: 'Cancel', PARTIALLY_FILLED: 'Partially Filled', SETTLED: 'for order settlement in partial order', CANCELLED: 'cancelled by the admin at the end of event' },
@@ -250,13 +232,12 @@ const enums = {
   },
   tdsStatus: ['P', 'A'], // pending active
   transactionType: {
-    value: ['Bonus', 'Refer-Bonus', 'Deposit', 'Withdraw', 'Bonus-Expire', 'Opening', 'TDS', 'Withdraw-Return', 'Play-OT', 'Win-OT', 'Play-Return-OT', 'User-Streak', 'Deactivate-User'],
+    value: ['Bonus', 'Refer-Bonus', 'Deposit', 'Withdraw', 'Bonus-Expire', 'Opening', 'TDS', 'Withdraw-Return', 'Play', 'Win', 'Play-Return', 'User-Streak', 'Deactivate-User'],
     map: {
       BONUS: 'Bonus',
       REFER_BONUS: 'Refer-Bonus',
       DEPOSIT: 'Deposit',
       WITHDRAW: 'Withdraw',
-      PLAY: 'Play',
       BONUS_EXPIRE: 'Bonus-Expire',
       PLAY_RETURN: 'Play-Return',
       WIN_RETURN: 'Win-Return',
@@ -266,9 +247,8 @@ const enums = {
       WITHDRAW_RETURN: 'Withdraw-Return',
       CASHBACK_CONTEST: 'Cashback-Contest',
       CASHBACK_RETURN: 'Cashback-Return',
-      PLAY_OT: 'Play-OT',
-      WIN_OT: 'Win-OT',
-      PLAY_RETURN_OT: 'Play-Return-OT',
+      PLAY: 'Play',
+      WIN: 'Win',
       USER_STREAK: 'User-Streak',
       DEACTIVATE_USER: 'Deactivate-User'
     }
@@ -281,7 +261,7 @@ const enums = {
     }
   },
   filterReportKeys: ['USER_REPORT', 'PARTICIPANT_REPORT', 'WIN_REPORT', 'WIN_RETURN_REPORT', 'PLAY_REPORT', 'PLAY_RETURN_REPORT', 'CREATOR_BONUS_REPORT', 'CREATOR_BONUS_RETURN_REPORT', 'APP_DOWNLOAD_REPORT', 'TAX_REPORT'],
-  category: ['CRICKET', 'FOOTBALL', 'KABADDI', 'BASEBALL', 'BASKETBALL', 'HOCKEY', 'CSGO', 'LOL', 'DOTA2', 'HANDBALL', 'NFL'], // Available sports categories
+  eCategory: ['CRICKET', 'FOOTBALL', 'KABADDI', 'BASEBALL', 'BASKETBALL', 'HOCKEY', 'CSGO', 'LOL', 'DOTA2', 'HANDBALL', 'NFL'], // Available sports categories
   redirection: ['REFER_AND_EARN', 'CONTEST', 'PROFILE', 'HOME', 'SLB', 'TRANSACTION'],
   platform: ['A', 'I', 'W', 'O', 'AD'], // A = Android, I = iOS, W = Web, O = Other, AD = Admin // Available platforms
   eStatus: {

@@ -125,11 +125,7 @@ module.exports = {
   redisSocketClient,
   cacheRoute: function (duration, sKey = '') {
     return async (req, res, next) => {
-      let key
-      if (sKey === 'portfolio' && req.query?.eHistoryStatus === historyStatus.map.CLOSED) key = getPortfolioKey({ eHistoryStatus: req.query?.eHistoryStatus, iUserId: req.user?._id.toString() })
-      else if (sKey === 'portfolio-count' && req.query?.eHistoryStatus === historyStatus.map.CLOSED) key = getPortfolioCardAndCountKey({ eHistoryStatus: req.query?.eHistoryStatus, iUserId: req.user?._id.toString() })
-      else if ((sKey === 'portfolio' || sKey === 'portfolio-count') && req.query?.eHistoryStatus === historyStatus.map.LIVE) return next()
-      else key = '__express__' + sanitizeHtml(req.originalUrl || req.url)
+      const key = '__express__' + sanitizeHtml(req.originalUrl || req.url)
       const cachedBody = await redisClient.get(key)
       if (cachedBody) {
         res.setHeader('is-cache', 1)

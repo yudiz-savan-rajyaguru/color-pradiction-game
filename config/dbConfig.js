@@ -1,10 +1,10 @@
 const dbVar = {
 
-  OT_ADMIN_DB_URL: process.env.OT_ADMIN_DB_URL || 'mongodb://localhost:27017/ol_admins',
-  OT_USER_DB_URL: process.env.OT_USER_DB_URL || 'mongodb://localhost:27017/ol_users',
-  OT_GAME_DB_URL: process.env.OT_GAME_DB_URL || 'mongodb://localhost:27017/ol_games',
-  OT_NOTIFICATION_DB_URL: process.env.OT_NOTIFICATION_DB_URL || 'mongodb://localhost:27017/ol_notifications',
-  OT_STATISTICS_DB_URL: process.env.OT_STATISTICS_DB_URL || 'mongodb://localhost:27017/ol_statistics',
+  ADMIN_DB_URL: process.env.ADMIN_DB_URL || 'mongodb://localhost:27017/ol_admins',
+  USER_DB_URL: process.env.USER_DB_URL || 'mongodb://localhost:27017/ol_users',
+  GAME_DB_URL: process.env.GAME_DB_URL || 'mongodb://localhost:27017/ol_games',
+  NOTIFICATION_DB_URL: process.env.NOTIFICATION_DB_URL || 'mongodb://localhost:27017/ol_notifications',
+  STATISTICS_DB_URL: process.env.STATISTICS_DB_URL || 'mongodb://localhost:27017/ol_statistics',
 
   REDIS_HOST: process.env.REDIS_HOST || 'localhost',
   REDIS_PORT: process.env.REDIS_PORT || 6379,

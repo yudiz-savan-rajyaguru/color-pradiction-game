@@ -2,11 +2,11 @@ const mongoose = require('mongoose')
 const { handleCatchError } = require('../helper/utilities.services')
 
 const config = require('../config/config')
-const AdminsDBConnect = connection(config.OT_ADMIN_DB_URL, parseInt(config.ADMINS_DB_POOLSIZE), 'Admins')
-const UsersDBConnect = connection(config.OT_USER_DB_URL, parseInt(config.USERS_DB_POOLSIZE), 'Users')
-const GamesDBConnect = connection(config.OT_GAME_DB_URL, parseInt(config.GAMES_DB_POOLSIZE), 'Games')
-const NotificationsDBConnect = connection(config.OT_NOTIFICATION_DB_URL, parseInt(config.NOTIFICATIONS_DB_POOLSIZE), 'Notifications')
-const StatisticsDBConnect = connection(config.OT_STATISTICS_DB_URL, parseInt(config.STATISTICS_DB_POOLSIZE), 'Statistics')
+const AdminsDBConnect = connection(config.ADMIN_DB_URL, parseInt(config.ADMINS_DB_POOLSIZE), 'Admins')
+const UsersDBConnect = connection(config.USER_DB_URL, parseInt(config.USERS_DB_POOLSIZE), 'Users')
+const GamesDBConnect = connection(config.GAME_DB_URL, parseInt(config.GAMES_DB_POOLSIZE), 'Games')
+const NotificationsDBConnect = connection(config.NOTIFICATION_DB_URL, parseInt(config.NOTIFICATIONS_DB_POOLSIZE), 'Notifications')
+const StatisticsDBConnect = connection(config.STATISTICS_DB_URL, parseInt(config.STATISTICS_DB_POOLSIZE), 'Statistics')
 
 function connection(DB_URL, maxPoolSize = 10, DB) {
   try {
